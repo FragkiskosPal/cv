@@ -8,9 +8,7 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-    }
+    tailwind.config = { darkMode: 'class' }
   </script>
   <style>
     .toggle-checkbox:checked + .toggle-label .dot {
@@ -22,11 +20,9 @@
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
-  <!-- Sticky Navigation -->
   <nav class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md p-4 flex justify-between items-center">
     <h1 class="text-lg font-semibold">Φραγκίσκος Παλλήκαρης</h1>
     <div class="flex items-center gap-4">
-      <!-- Dark Mode Toggle -->
       <div class="flex items-center gap-2">
         <label for="dark-toggle" class="text-sm">Dark Mode</label>
         <input type="checkbox" id="dark-toggle" onclick="document.documentElement.classList.toggle('dark')" class="toggle-checkbox hidden">
@@ -34,7 +30,6 @@
           <span class="dot absolute left-0 top-0 w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 ease-in-out transform dark:translate-x-5"></span>
         </label>
       </div>
-      <!-- Language Toggle -->
       <div class="flex items-center gap-2">
         <label for="lang-toggle" class="text-sm">English</label>
         <input type="checkbox" id="lang-toggle" onclick="toggleLang()" class="toggle-checkbox hidden">
@@ -59,13 +54,13 @@
 
     <section class="mb-6" data-aos="fade-up">
       <h2 class="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-2" data-el="profile-title">Προσωπικό Προφίλ</h2>
-      <p data-el="profile-text">Ενθουσιώδης προγραμματιστής με εμπειρία στην υποστήριξη λογισμικού και συστημάτων. Ειδικεύομαι σε τεχνολογίες όπως SQL, MS Access, Oracle και διαχείριση εξοπλισμού Honeywell.</p>
+      <p data-el="profile-text">Ενθουσιώδης προγραμματιστής με εμπειρία στην υποστήριξη λογισμικού και συστημάτων. Ειδικεύομαι σε τεχνολογίες όπως SQL, MS Access, Oracle και διαχείριση εξοπλισμού Honeywell, με έμφαση στη συντήρηση δικτύων και στη γρήγορη επίλυση τεχνικών προβλημάτων.</p>
     </section>
 
     <section class="mb-6" data-aos="fade-up">
       <h2 class="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-2" data-el="exp-title">Επαγγελματική Εμπειρία</h2>
       <ul class="list-disc list-inside space-y-1">
-        <li data-el="exp1">Metro AEBE – Junior Developer - WMS Development (2024 - Present)</li>
+        <li data-el="exp1">Metro AEBE – Junior Software Engineer - WMS Development (2024 - Present)</li>
         <li data-el="exp2">Metro AEBE – IT Support Specialist (2021 - 2024) | Υποστήριξη συστημάτων πρώτου και δεύτερου επιπέδου (SQL, MS Access, Oracle), συντήρηση LAN δικτύων, διαχείριση εξοπλισμού (PC, Tablet, Honeywell)</li>
       </ul>
     </section>
@@ -78,17 +73,12 @@
     </section>
 
     <section class="mb-6" data-aos="fade-up">
-      <h2 class="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-2">Γλώσσες</h2>
+      <h2 class="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-2" data-el="lang-title">Γλώσσες</h2>
       <ul class="list-disc list-inside">
-        <li>Ελληνικά (Μητρική)</li>
-        <li>Αγγλικά (B2)</li>
-        <li>Γερμανικά (A2)</li>
+        <li data-el="exp3">Ελληνικά (Μητρική)</li>
+        <li data-el="exp4">Αγγλικά (B2)</li>
+        <li data-el="exp5">Γερμανικά (A2)</li>
       </ul>
-    </section>
-
-    <section class="mb-6" data-aos="fade-up">
-      <h2 class="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-2">Ενδιαφέροντα</h2>
-      <p>Ιστιοπλοΐα – Αθλητής στον Ναυτικό Όμιλο Ελλάδος (NOE) με εμπειρία σε σκάφη Optimist, Laser, 420, Topaz και match race Lightning.</p>
     </section>
 
     <footer class="mt-10 text-center text-sm text-gray-400 dark:text-gray-500" data-aos="fade-up">
@@ -97,18 +87,11 @@
   </div>
 
   <script>
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-      offset: 50,
-    });
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true, offset: 50 });
 
     fetch('https://yourdomain.com/logger.php', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         time: new Date().toISOString(),
         userAgent: navigator.userAgent
@@ -126,17 +109,25 @@
           'exp2': 'Metro AEBE – IT Support Specialist (2021 - 2024) | Support of 1st and 2nd level systems (SQL, MS Access, Oracle), LAN maintenance, and equipment management (PC, Tablet, Honeywell)',
           'edu-title': 'Education',
           'edu1': 'Computer and Informatics Engineering, University of West Attica (2018 - 2026)',
-          'city': 'Athens'
+          'city': 'Athens',
+          'lang-title': 'Languages',
+          'exp3': 'Greek (Native)',
+          'exp4': 'English (B2)',
+          'exp5': 'German (A2)'
         },
         gr: {
           'profile-title': 'Προσωπικό Προφίλ',
           'profile-text': 'Ενθουσιώδης προγραμματιστής με εμπειρία στην υποστήριξη λογισμικού και συστημάτων. Ειδικεύομαι σε τεχνολογίες όπως SQL, MS Access, Oracle και διαχείριση εξοπλισμού Honeywell, με έμφαση στη συντήρηση δικτύων και στη γρήγορη επίλυση τεχνικών προβλημάτων.',
           'exp-title': 'Επαγγελματική Εμπειρία',
-          'exp1': 'Metro AEBE – Junior Software Engineer -Ανάπτυξη WMS (2024 - Σήμερα)',
+          'exp1': 'Metro AEBE – Junior Software Engineer - Ανάπτυξη WMS (2024 - Σήμερα)',
           'exp2': 'Metro AEBE – IT Support Specialist (2021 - 2024) | Υποστήριξη συστημάτων πρώτου και δεύτερου επιπέδου (SQL, MS Access, Oracle), συντήρηση LAN δικτύων, διαχείριση εξοπλισμού (PC, Tablet, Honeywell)',
           'edu-title': 'Σπουδές',
           'edu1': 'Μηχανικών Πληροφορικής και Υπολογιστών, Πανεπιστήμιο Δυτικής Αττικής (2018 - 2026)',
-          'city': 'Αθήνα'
+          'city': 'Αθήνα',
+          'lang-title': 'Γλώσσες',
+          'exp3': 'Ελληνικά (Μητρική)',
+          'exp4': 'Αγγλικά (B2)',
+          'exp5': 'Γερμανικά (A2)'
         }
       };
 
