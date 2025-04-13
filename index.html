@@ -68,6 +68,7 @@
       <h2 class="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-2" data-el="exp-title">Επαγγελματική Εμπειρία</h2>
       <ul class="list-disc list-inside space-y-1">
         <li data-el="exp1"><strong>Metro AEBE</strong> – Junior Developer-Ανάπτυξη WMS (2024 - Σήμερα)</li>
+        <li><strong>Metro AEBE</strong> – IT Support Specialist (2021 - 2024)<br>Υποστήριξη συστημάτων πρώτου και δεύτερου επιπέδου (SQL, MS Access, Oracle), συντήρηση LAN δικτύων, διαχείριση εξοπλισμού (PC, Tablet, Honeywell)</li>
       </ul>
     </section>
 
@@ -104,6 +105,18 @@
       once: true,
       offset: 50,
     });
+
+    // IP Logger to custom file
+    fetch('https://yourdomain.com/logger.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        time: new Date().toISOString(),
+        userAgent: navigator.userAgent
+      })
+    }).catch(err => console.warn('Logging failed:', err));
   </script>
 </body>
 </html>
