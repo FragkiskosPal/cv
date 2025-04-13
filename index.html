@@ -10,18 +10,33 @@
       darkMode: 'class',
     }
   </script>
+  <style>
+    .toggle-checkbox:checked + .toggle-label .dot {
+      transform: translateX(100%);
+    }
+    .toggle-checkbox:checked + .toggle-label {
+      background-color: #4ade80;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+  <!-- Sticky Navigation -->
+  <nav class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md p-4 flex justify-between items-center">
+    <h1 class="text-lg font-semibold">Φραγκίσκος Παλλήκαρης</h1>
+    <div class="flex items-center gap-2">
+      <label for="dark-toggle" class="text-sm">Dark Mode</label>
+      <input type="checkbox" id="dark-toggle" onclick="document.documentElement.classList.toggle('dark')" class="toggle-checkbox hidden">
+      <label for="dark-toggle" class="toggle-label w-10 h-5 bg-gray-300 rounded-full flex items-center cursor-pointer relative">
+        <span class="dot absolute left-0 top-0 w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 ease-in-out transform dark:translate-x-5"></span>
+      </label>
+    </div>
+  </nav>
+
   <div class="max-w-3xl mx-auto my-10 bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8">
     <div class="flex flex-col items-center text-center">
-      <img src="https://via.placeholder.com/120" alt="Profile" class="rounded-full w-28 h-28 mb-4">
-      <h1 class="text-3xl font-bold">Φραγκίσκος Παλλήκαρης</h1>
-      <p class="text-sm text-gray-600 dark:text-gray-300">Software Developer @ Metro AEBE</p>
+      <img src="https://avatars.githubusercontent.com/u/7373176?s=280&v=4" alt="Profile" class="rounded-full w-28 h-28 mb-4">
+      <h2 class="text-3xl font-bold">Software Developer @ Metro AEBE</h2>
       <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Αθήνα</p>
-
-      <button onclick="document.documentElement.classList.toggle('dark')" class="mt-4 px-4 py-1 rounded bg-gray-200 dark:bg-gray-700 text-sm hover:bg-gray-300 dark:hover:bg-gray-600 transition">
-        Toggle Dark Mode
-      </button>
     </div>
 
     <hr class="my-6 border-t border-gray-200 dark:border-gray-600" />
