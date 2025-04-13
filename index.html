@@ -99,7 +99,12 @@
   </div>
 
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 50,
+    });
 
     function toggleLang() {
       const inGreek = document.getElementById('lang-toggle').checked;
