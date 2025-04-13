@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Φραγκίσκος Παλλήκαρης | Βιογραφικό</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -43,8 +45,8 @@
     </div>
   </nav>
 
-  <div class="max-w-3xl mx-auto my-10 bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8">
-    <div class="flex flex-col items-center text-center">
+  <div class="max-w-3xl mx-auto my-10 bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8" data-aos="fade-up">
+    <div class="flex flex-col items-center text-center" data-aos="zoom-in">
       <img src="https://avatars.githubusercontent.com/u/7373176?s=280&v=4" alt="Profile" class="rounded-full w-28 h-28 mb-4">
       <h2 class="text-3xl font-bold">Software Developer @ Metro AEBE</h2>
       <p class="text-sm text-gray-500 dark:text-gray-400 mt-2" data-el="city">Αθήνα</p>
@@ -52,12 +54,12 @@
 
     <hr class="my-6 border-t border-gray-200 dark:border-gray-600" />
 
-    <section class="mb-6">
+    <section class="mb-6" data-aos="fade-up">
       <h2 class="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-2" data-el="profile-title">Προσωπικό Προφίλ</h2>
       <p data-el="profile-text">Ενθουσιώδης προγραμματιστής με εμπειρία στην ανάπτυξη λογισμικού και συστημάτων εφοδιαστικής αλυσίδας. Επικεντρωμένος στην ποιότητα του κώδικα και τη συνεχή βελτίωση.</p>
     </section>
 
-    <section class="mb-6">
+    <section class="mb-6" data-aos="fade-up">
       <h2 class="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-2" data-el="exp-title">Επαγγελματική Εμπειρία</h2>
       <ul class="list-disc list-inside space-y-1">
         <li data-el="exp1"><strong>Metro AEBE</strong> – Junior Developer-Ανάπτυξη WMS (2024 - Σήμερα)</li>
@@ -65,14 +67,14 @@
       </ul>
     </section>
 
-    <section class="mb-6">
+    <section class="mb-6" data-aos="fade-up">
       <h2 class="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-2" data-el="edu-title">Σπουδές</h2>
       <ul class="list-disc list-inside">
         <li data-el="edu1">Μηχανικών Πληροφορικής και Υπολογιστών (2018 - 2026)</li>
       </ul>
     </section>
 
-    <section class="mb-6">
+    <section class="mb-6" data-aos="fade-up">
       <h2 class="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-2">Δεξιότητες</h2>
       <div class="grid grid-cols-2 gap-2">
         <span class="bg-teal-100 dark:bg-teal-800 dark:text-teal-100 text-teal-800 text-sm px-2 py-1 rounded">C# / .NET Framework</span>
@@ -83,7 +85,7 @@
       </div>
     </section>
 
-    <section class="mb-6">
+    <section class="mb-6" data-aos="fade-up">
       <h2 class="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-2" data-el="lang-title">Γλώσσες</h2>
       <ul class="list-disc list-inside">
         <li data-el="lang1">Ελληνικά (Μητρική)</li>
@@ -91,12 +93,14 @@
       </ul>
     </section>
 
-    <footer class="mt-10 text-center text-sm text-gray-400 dark:text-gray-500">
+    <footer class="mt-10 text-center text-sm text-gray-400 dark:text-gray-500" data-aos="fade-up">
       <p>© 2025 Φραγκίσκος Παλλήκαρης</p>
     </footer>
   </div>
 
   <script>
+    AOS.init();
+
     function toggleLang() {
       const inGreek = document.getElementById('lang-toggle').checked;
       const content = {
@@ -137,5 +141,3 @@
   </script>
 </body>
 </html>
-
-  
